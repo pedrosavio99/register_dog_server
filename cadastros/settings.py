@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-(ji^n4(3@v)#tn%lg4xa2r0v+s+q)-y$v*v_(z5&5!us1vnsvv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'registerdog.onrender.com',
+]
 
 
 # Application definition
