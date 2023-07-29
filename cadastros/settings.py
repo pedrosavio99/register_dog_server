@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'registerdog.onrender.com',
+    '*'
 ]
 
 
@@ -77,11 +78,22 @@ WSGI_APPLICATION = 'cadastros.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'default': {
+            'ENGINE': 'djongo',
+            'NAME': 'demodatabase',
+            'ENFORCE_SCHEMA': False,
+            'CLIENT': {
+                'host': 'mongodb+srv://pedrosavio99:mce0yM0mRPMWqrTG@cluster0.aqnti.mongodb.net/crudog?retryWrites=true&w=majority'
+            }  
+        }
 }
 
 
